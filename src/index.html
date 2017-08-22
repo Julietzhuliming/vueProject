@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>维纳斯</title>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/vue/vue-router.js"></script>
+    <script src="lib/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/swiper/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div id="app" class="container">
+<!-- header -->
+    <my-header></my-header>
+<!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view name="home"></router-view>
+<!-- footer -->
+    <my-footer></my-footer>
+</div>
+<script src="../build/build.js"></script>
+</body>
+</html>
