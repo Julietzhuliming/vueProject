@@ -128,7 +128,13 @@ nav a {
     padding: 50px 0px;
     text-align: center;
 }
-
+.ourCase.menu_left .product_classify {
+    justify-content: left;
+}
+.ourCase.menu_left .product_classify .product_type{
+    margin-left: 0%;
+    margin-right: 4%;
+}
 .service img{
     width:50px;
 }
@@ -299,6 +305,11 @@ footer {
 }
 .menu_about {
     background: url('./../images/about_banner_bg.png');
+    height: 300px;
+    width: 100%;
+}
+.show_case_bg {
+    background: url('./../images/case_banner_bg.png');
     height: 300px;
     width: 100%;
 }

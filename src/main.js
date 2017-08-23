@@ -1,33 +1,44 @@
-import AppHeader from './component/header.vue';
-import AppFooter from './component/footer.vue';
-import Home from './component/home.vue';
-// import About from './component/about.vue';
-// import Product from './component/product.vue';
-// import Showcase from './component/showcase.vue';
-// import News from './component/news.vue';
-// import Contact from './component/contactus.vue';
-const routes = [
-  { path: '/home', component: Home }
-  // { path: '/about', component: About },
-  // { path: '/product', component: Product },
-  // { path: '/showcase', component: Showcase },
-  // { path: '/news', component: News },
-  // { path: '/contact', component: Contact }
-]
+import AppHeader from './component/common/header.vue';
+import AppFooter from './component/common/footer.vue';
+import Slider from './component/common/slider.vue';
+import Service from './component/common/service.vue';
+import Case from './component/common/case.vue';
+import About from './component/common/about.vue';
+import Menu from './component/common/menu.vue';
+import HomePage from './component/home_page.vue';
+import AboutUs from './component/about_us.vue';
+import ProductService from './component/product_service.vue';
+import ShowCase from './component/show_case.vue';
+import NewsInfor from './component/news_infor.vue';
+import ContactUs from './component/contact_us.vue';
 
+// 公共组件
 Vue.component('my-header', AppHeader);
 Vue.component('my-footer', AppFooter);
+Vue.component('Servicecomponent', Service);
+Vue.component('Casecomponent', Case);
+Vue.component('Slidercomponent', Slider);
+Vue.component('Aboutcomponent', About);
+Vue.component('Menucomponent', Menu);
+const routes = [
+  { path: '/home', component: HomePage },
+  { path: '/aboutus', component: AboutUs },
+  { path: '/product', component: ProductService },
+  { path: '/showcase', component: ShowCase },
+  { path: '/newsinfor', component: NewsInfor },
+  { path: '/contactus', component: ContactUs }
+];
 
 const router = new VueRouter({
     routes // （缩写）相当于 routes: routes
-})
+});
 const app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue.js!'
   },
   router
-}).$mount('#app')
+}).$mount('#app');
 
 // window.onload = function(){
 //     var mySwiper = new Swiper('.swiper-container', {
