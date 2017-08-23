@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+.DS_Store
+.settings
+.project
+*.pyc
+*.komodoproject
+/nbproject/private/
+*.zip
+*.xlsx
+/fonts/
+*.xml
+*.idea/workspace.xml
