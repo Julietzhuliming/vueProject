@@ -3,13 +3,9 @@
         <section class="news_banner_bg">
         </section>
         <section class="ourCase">
-            <div class="product_classify flex">
-                <div class="product_type" v-for="product in product.productType">
-                    <span>{{product.productTitle}}</span>
-                </div>
-            </div>
+            <Menucomponent></Menucomponent>
             <div class="case_content">
-                <div v-for="item in product.productList">
+                <div v-for="item in newsData.newsList">
                     <img :src="item.img" />
                     <div class="img_title">
                         <span>{{item.text}}</span>

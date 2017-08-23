@@ -81,10 +81,15 @@ nav{
 nav a {
     display: inline-block;
     margin:0 10px;
-    outline: none;
     text-decoration: none;
     font-size: 0.82em;
     color: #fff;
+}
+nav a:link{
+    color: #fff;
+}
+nav a:active,nav a:hover {
+    color: red;
 }
 .swiper_slider{
     height: 450px;
@@ -313,6 +318,11 @@ footer {
     height: 300px;
     width: 100%;
 }
+.contact_banner_bg {
+    background: url('./../images/contact_banner_bg.png');
+    height: 300px;
+    width: 100%;
+}
 .about_lws {
     text-align: left;
 }
@@ -423,3 +433,10 @@ footer {
     width: 100%;
 }
 /*新闻动态  end*/
+
+.erweimaimg_box {
+    width: 100px;
+}
+.erweimaimg_box img{
+    max-width: 100%;
+}

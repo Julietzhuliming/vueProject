@@ -21,6 +21,7 @@ Vue.component('Slidercomponent', Slider);
 Vue.component('Aboutcomponent', About);
 Vue.component('Menucomponent', Menu);
 const routes = [
+  { path: '/', component: HomePage },
   { path: '/home', component: HomePage },
   { path: '/aboutus', component: AboutUs },
   { path: '/product', component: ProductService },
@@ -35,7 +36,15 @@ const router = new VueRouter({
 const app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue.js!'
+    gridData: "",
+  },
+  mounted: function() {
+    this.$nextTick(function () {
+      this.$http.jsonp('http://***.com').then(function(res) {
+        console.log(res.data)
+        this.gridData = res.data;
+      });
+    });
   },
   router
 }).$mount('#app');
