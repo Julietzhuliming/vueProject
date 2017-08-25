@@ -1,3 +1,5 @@
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 import AppHeader from './component/common/header.vue';
 import AppFooter from './component/common/footer.vue';
 import Slider from './component/common/slider.vue';
@@ -12,6 +14,8 @@ import ShowCase from './component/show_case.vue';
 import NewsInfor from './component/news_infor.vue';
 import ContactUs from './component/contact_us.vue';
 
+require("./css/index.css");
+Vue.use(VueRouter); 
 // 公共组件
 Vue.component('my-header', AppHeader);
 Vue.component('my-footer', AppFooter);
@@ -20,6 +24,7 @@ Vue.component('Casecomponent', Case);
 Vue.component('Slidercomponent', Slider);
 Vue.component('Aboutcomponent', About);
 Vue.component('Menucomponent', Menu);
+
 const routes = [
   { path: '/', component: HomePage },
   { path: '/home', component: HomePage },
@@ -38,14 +43,14 @@ const app = new Vue({
   data: {
     gridData: "",
   },
-  mounted: function() {
-    this.$nextTick(function () {
-      this.$http.jsonp('http://***.com').then(function(res) {
-        console.log(res.data)
-        this.gridData = res.data;
-      });
-    });
-  },
+  // mounted: function() {
+  //   this.$nextTick(function () {
+  //     this.$http.jsonp('http://***.com').then(function(res) {
+  //       console.log(res.data)
+  //       this.gridData = res.data;
+  //     });
+  //   });
+  // },
   router
 }).$mount('#app');
 

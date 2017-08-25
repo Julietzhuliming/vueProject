@@ -9,5 +9,6 @@ npm-debug.log
 *.zip
 *.xlsx
 /fonts/
+/build/*
 *.xml
 *.idea/workspace.xml
