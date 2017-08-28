@@ -54,7 +54,6 @@ h6{color: rgba(90, 87, 87, 0.62);}
     -moz-align-self: center;/* WP IE 10 */
     -o-align-self: center;/* WP Opera 10 */
     align-self: center;
-    width: 100%;
 }
 .swiper-button-prev:before{
     background-image: url('../images/arrow_l.png');
@@ -63,14 +62,17 @@ h6{color: rgba(90, 87, 87, 0.62);}
     background-image: url('../images/arrow_r.png');
 }
 header{
-}
-nav{
     position: absolute;
     width: 100%;
     height: 69px;
     z-index: 9999;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     background: rgba(215, 215, 255, 0.09);
+}
+nav{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
 }
 .nav_menu{
     max-width: 1200px;
@@ -80,9 +82,16 @@ nav{
 }
 nav a {
     display: inline-block;
-    margin:0 10px;
+    margin: 0 0 0 45px;
     text-decoration: none;
-    font-size: 0.82em;
+    font-size: 14px;
+    color: #fff;
+}
+.nav_icon {
+    
+}
+.icon_font {
+    font-size: 24px;
     color: #fff;
 }
 nav a:link{
@@ -92,7 +101,6 @@ nav a:active,nav a:hover {
     color: red;
 }
 .swiper_slider{
-    height: 450px;
     border-bottom: 1px solid #ddd;
 }
 .swiper-container{
@@ -108,6 +116,7 @@ nav a:active,nav a:hover {
 .swiper-slide {
     max-width: 100%;
     max-height: 100%;
+    height: auto;
 }
 .swiper-button-prev,.swiper-button-next{
     border-radius: 60px;
@@ -160,15 +169,24 @@ nav a:active,nav a:hover {
     width: 22.2%;
     height: 100%;
     display: inline-block;
-    margin: 0 1%;
+    margin: 0 0;
 }
 .service_content>div.active{
     -webkit-box-shadow:0 0 10px #ddd;
     -moz-box-shadow:0 0 10px #ddd;
     box-shadow:0 0 10px #ddd;
 }
+.sub_service_content{
+    border:1px solid #fff;
+    padding:5px 8px;
+    background:transparent;
+    -webkit-box-shadow:  1px 1px 15px  #fff;
+    -moz-box-shadow:  1px 1px 15px  #fff;
+    box-shadow:  1px 1px 15px  #fff;
+}
 .sub_service_content:hover{
-    border:1px solid #ddd;
+    cursor: pointer;
+    border:1px solid #d4cdcd;
     padding:5px 8px;
     background:rgba(241, 241, 241, 0.44);
     -webkit-box-shadow:  1px 1px 15px  #ddd;
@@ -201,6 +219,7 @@ nav a:active,nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .img_box, .about_box {
     display: inline-block;
     vertical-align: top;
@@ -209,14 +228,46 @@ nav a:active,nav a:hover {
 .img_box {
     width: 46%;
 }
+.map_box{
+    height: 402px;
+    width: 602px;
+    position: absolute;
+    left: 0px;
+}
 .about_box {
     margin-left: 5%;
     width: 48%;
+}
+.contactus_container .about_box{
+    position: absolute;
+    right: 10%;
+    width: auto;
 }
 .about_us {
     font-size: 0.8em;
     text-transform: uppercase;
     margin: 10px 0;
+}
+.contact_us {
+    padding: 80px 0;
+}
+.contact_us .title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 58px;
+}
+.contact_us .desc {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #303030;
+}
+.contact_us .desc span {
+    color:999999;
+}
+.contactus_container {
+    position: relative;
+    text-align: center;
+    height: 400px;
 }
 .who_we {
     margin: 10px 0;
@@ -322,6 +373,25 @@ footer {
     background: url('./../images/contact_banner_bg.png');
     height: 300px;
     width: 100%;
+}
+.bg {
+    position: relative;
+}
+.bg>h2 {
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+.bg>p {
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: 59%;
+    width: 100%;
+    text-align: center;
 }
 .about_lws {
     text-align: left;
@@ -435,8 +505,16 @@ footer {
 /*新闻动态  end*/
 
 .erweimaimg_box {
-    width: 100px;
+   margin-top: 42px;
 }
 .erweimaimg_box img{
     max-width: 100%;
+}
+.erwima_desc{
+    margin: 8px 0;
+    padding: 0;
+    font-size: 12px;
+    color: #989898;
+    text-align: center;
+    width: 138px;
 }

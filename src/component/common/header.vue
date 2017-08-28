@@ -3,6 +3,10 @@
 <template>
   <header>
         <nav class="flex">
+            <div class="nav_icon flex">
+                <img :src="icon"/>
+                <span class="icon_font">{{icon_desc}}</span>
+            </div>
             <div class="nav_menu flex">
                 <router-link to="/home">首页</router-link>
                 <router-link to="/aboutus">关于我们</router-link>
@@ -18,7 +22,9 @@
   export default {
     data () {
       return {
-        msg:'text'
+        msg:'text',
+        icon:'images\/logo_icon.png',
+        icon_desc:"维纳斯"
       }
     }
   }

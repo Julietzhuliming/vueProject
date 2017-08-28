@@ -1,34 +1,37 @@
 <template>
 <main>
-	<section class="contact_banner_bg"></section>
+	<section class="contact_banner_bg bg">
+        <h2>{{contactus.title}}</h2>
+        <p>{{contactus.title_en}}</p>
+    </section>
 	<section class="aboutUs contact_us">
-        <div class="aboutUs_container">
-            <div class="img_box">
-                <img :src="contactus.img" width="100%"/>
+        <div class="aboutUs_container contactus_container">
+            <div class="img_box map_box">
+                <iframe src="..\/src/map.html" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
             </div>
             <div class="about_box">
                 <h2 class="title">{{contactus.desc1}}</h2>
-                <p class="desc_2">{{contactus.desc1}}</p>
-                <p class="desc_2">{{contactus.desc2}}</p>
-                <p class="desc_2">{{contactus.desc3}}</p>
-                <p class="desc_2">{{contactus.desc4}}</p>
-                <p class="desc_2">{{contactus.desc5}}</p>
+                <p class="desc">{{contactus.desc2}}</p>
+                <p class="desc">{{contactus.desc3}}</p>
+                <p class="desc">{{contactus.desc4}}</p>
+                <p class="desc">{{contactus.desc5}}</p>
                 <div class="erweimaimg_box">
 					<img :src="contactus.img2" />
 				</div>
-				<p class="desc_2">{{contactus.desc6}}</p>
+				<p class="erwima_desc">{{contactus.desc6}}</p>
             </div>
         </div>
     </section>
 </main>
 
 </template>
-
 <script>
   export default {
     data () {
       return {
         contactus:{
+                title:'联系我们',
+                title_en:'Contact Us',
         		img:'images\/map.png',
                 img2:'images\/erweima.png',
                 desc1:'深圳维纳斯娱乐互动有限公司',

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import AppHeader from './component/common/header.vue';
+import BMapComponent from './component/common/BMapComponent.vue';
 import AppFooter from './component/common/footer.vue';
 import Slider from './component/common/slider.vue';
 import Service from './component/common/service.vue';
@@ -14,9 +15,17 @@ import ShowCase from './component/show_case.vue';
 import NewsInfor from './component/news_infor.vue';
 import ContactUs from './component/contact_us.vue';
 
+
+import axios from 'axios'
+Vue.prototype.$http = axios
+require("./lib/swiper/swiper.min.js");
+require("./lib/swiper/swiper.min.css");
 require("./css/index.css");
+
+
 Vue.use(VueRouter); 
 // 公共组件
+Vue.component('b-map-component', BMapComponent);
 Vue.component('my-header', AppHeader);
 Vue.component('my-footer', AppFooter);
 Vue.component('Servicecomponent', Service);
@@ -43,14 +52,29 @@ const app = new Vue({
   data: {
     gridData: "",
   },
-  // mounted: function() {
-  //   this.$nextTick(function () {
-  //     this.$http.jsonp('http://***.com').then(function(res) {
-  //       console.log(res.data)
-  //       this.gridData = res.data;
-  //     });
-  //   });
-  // },
+  mounted: function() {
+      var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 5000,//可选选项，自动滑动
+        direction: 'horizontal',
+        loop: true,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        // 如果需要滚动条
+        // scrollbar: '.swiper-scrollbar',
+      });
+    // axios.get('/api2/movie/us_box', {params: {city: '深圳'}}).then(function (res) {
+    //             console.log('rateResult:')
+    //             console.log(res)
+    //             let arr = res.data.subjects
+    //         }).catch(function (res) {
+    //             console.log('wrong:')
+    //             console.log(res)
+    //         })
+
+  },
   router
 }).$mount('#app');
 
