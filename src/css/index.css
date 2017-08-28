@@ -88,11 +88,13 @@ nav a {
     color: #fff;
 }
 .nav_icon {
-    
+
 }
 .icon_font {
     font-size: 24px;
     color: #fff;
+    width: 120px;
+    margin-left: 12px;
 }
 nav a:link{
     color: #fff;
@@ -227,6 +229,10 @@ nav a:active,nav a:hover {
 }
 .img_box {
     width: 46%;
+    width: 600px;
+    right: 0;
+    margin-top: 30px;
+    float: right;
 }
 .map_box{
     height: 402px;
@@ -270,9 +276,10 @@ nav a:active,nav a:hover {
     height: 400px;
 }
 .who_we {
-    margin: 10px 0;
+    margin:80px 0 0 0;
     padding: 0;
-    font-size: 1.6em;
+    font-size: 24px;
+    font-weight: normal;
 }
 .desc_1 {
     margin:25px 0;
@@ -282,11 +289,14 @@ nav a:active,nav a:hover {
     font-style:oblique
 }
 .desc_2 {
-    font-size: 0.9em;
+    font-size: 14px;
     color: gray;
     padding: 0;
-    margin: 35px 0;
+    margin: 0 0 30px 0;
     line-height: 1.5;
+}
+.about_lws_desc>p:nth-child(1){
+    margin-top: 70px;
 }
 .we_font {
     padding-bottom: 10px;
@@ -373,13 +383,13 @@ footer {
     background: url('./../images/contact_banner_bg.png');
     height: 300px;
     width: 100%;
+    color: #fff;
 }
 .bg {
     position: relative;
 }
 .bg>h2 {
     font-size: 24px;
-    color: #fff;
     position: absolute;
     top: 50%;
     width: 100%;
@@ -387,7 +397,6 @@ footer {
 }
 .bg>p {
     font-size: 12px;
-    color: #fff;
     position: absolute;
     top: 59%;
     width: 100%;
@@ -398,12 +407,12 @@ footer {
 }
 .about_lws_desc{
     margin-left: 0;
-    width: 50%;
-    margin-right: 3%;
+    width: 47.5%;
+    margin-right: 2%;
 }
 .cultural_idea{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 160px auto 20px;
     height: auto;
 }
 .idea_box {
@@ -414,11 +423,10 @@ footer {
     position: relative;
     display: inline-block;
     color: #fff;
-    transform: scale(0.78);
-    font-size: 1.2em;
+    transform: scale(0.76);
 }
 .idea_box:hover {
-    transform: scale(1);
+    transform: scale(1.05);
     background: #bd0a0a;
     cursor: pointer;
 }
@@ -428,7 +436,7 @@ footer {
     top: 40%;
     text-align: center;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 20px;
 }
 .idea_box .desc {
     display: block;
@@ -436,7 +444,7 @@ footer {
     top: 58%;
     text-align: center;
     width: 100%;
-    font-size: 0.8em;
+    font-size: 16px;
 }
 .idea_box .detail_desc{
     position: absolute;
@@ -444,23 +452,22 @@ footer {
     left: 10%;
     text-align: center;
     width: 80%;
-    font-size: 0.7em;
     display: none;
 }
 .idea_box:hover .title {
     top: 20%;
-    font-size: 0.9em;
+    font-size: 16px;
 }
 .idea_box:hover .desc {
     top: 32%;
-    font-size: 0.7em;
+    font-size: 12px;
 }
 .idea_box:hover .detail_desc {
     left: 10%;
     top: 42%;
     width: 80%;
-    font-size: 0.68em;
-    line-height: 1.2;
+    font-size: 12px;
+    line-height: 1.5;
     display: block;
 }
 /*产品与服务 begin*/
@@ -472,7 +479,6 @@ footer {
 .product_classify{padding:0px;}
 .product_type{
     border:1px solid rgba(224, 218, 218, 0.62);
-
     margin-left:4%;
     border-radius:20px;
     width:100px;
@@ -501,6 +507,36 @@ footer {
     background: url('./../images/news_banner_bg.png')  no-repeat;
     height: 300px;
     width: 100%;
+    background-position: 0 70px;
+    color:#000;
+}
+.newsinfor_box {
+    max-width: 1200px;
+    background: #f7f7f7;
+    margin: 0 auto;
+    position: relative;
+    height: 180px;
+}
+.img_content {
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+.news_content {
+    position: absolute;
+    left: 280px;
+    top: 20px;
+    width: 736px;
+}
+.news_title{
+    font-size: 18px;
+    color:#303030;
+    margin-top: 40px;
+}
+.news_desc {
+    font-size: 13px;
+    color:#999999;
+    line-height: 1.8;
 }
 /*新闻动态  end*/
 
