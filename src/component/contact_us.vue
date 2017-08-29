@@ -1,5 +1,6 @@
 <template>
 <main>
+    <my-header></my-header>
 	<section class="contact_banner_bg bg">
         <h2>{{contactus.title}}</h2>
         <p>{{contactus.title_en}}</p>

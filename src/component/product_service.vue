@@ -1,10 +1,11 @@
 <template>
     <main>
+        <my-header :child-msg="new_header"></my-header>
         <section class="contain_image_head"></section>
         <section class="ourCase product_service">
             <h2>{{product.title}}</h2>
             <h6>{{product.sub_title}}</h6>
-            <Menucomponent></Menucomponent>
+            <Menucomponent :child-msg="product.productType"></Menucomponent>
             <Casecomponent></Casecomponent>
         </section>
         <section class="service product_service">
@@ -18,15 +19,19 @@
     export default {
         data () {
             return {
+                new_header:{
+                    'background':'transparent',
+                    'color':'#fff',
+                },
                 product:{
                     title:'产品展示',
                     sub_title:"在一个互联网+时代不断探索数字营销无线可能，立足国际视野之上的创新型营销方式，在瞬息万变中与具有创新精神的客户一同成长",
                     productType:[
-                        {productID:"1",productTitle:"商业街道",logoUrl:""},
-                        {productID:"2",productTitle:"步行街",logoUrl:""},
-                        {productID:"3",productTitle:"广场",logoUrl:""},
-                        {productID:"4",productTitle:"飞机场",logoUrl:""},
-                        {productID:"5",productTitle:"火车站",logoUrl:""}
+                        {ID:"1",Title:"商业街道",Url:""},
+                        {ID:"2",Title:"步行街",Url:""},
+                        {ID:"3",Title:"广场",Url:""},
+                        {ID:"4",Title:"飞机场",Url:""},
+                        {ID:"5",Title:"火车站",Url:""}
                     ]
                 },
                 service:{

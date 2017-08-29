@@ -1,5 +1,6 @@
 <template>
 <main>
+  <my-header :child-msg="new_header"></my-header>
   <Slidercomponent></Slidercomponent>
   <section class="service">
         <p>service</p>
@@ -24,6 +25,10 @@
   export default {
     data () {
       return {
+            new_header:{
+                'background':'transparent',
+                'color':'#fff',
+            },
             learn_more:'了解更多',
             see_more:'查看更多',
             service:{

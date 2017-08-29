@@ -1,5 +1,6 @@
 <template>
-	<main>
+    <main>
+        <my-header :child-msg="new_header"></my-header>
 		<section class="menu_about"></section>
 		<div class="aboutUs_container">
 			<h2 class="who_we about_lws">{{aboutwls.title}}</h2>
@@ -24,6 +25,10 @@
   export default {
     data () {
       return {
+        new_header:{
+            'background':'transparent',
+            'color':'#fff',
+        },
       	aboutwls:{
                 title:'关于维纳斯',
                 img:'images\/about_intro.png',

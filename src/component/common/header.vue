@@ -1,7 +1,7 @@
 <style>
 </style>
 <template>
-  <header>
+  <header v-bind:style="childMsg">
         <nav class="flex">
             <div class="nav_icon flex">
                 <img :src="icon"/>
@@ -20,6 +20,17 @@
 </template>
 <script>
   export default {
+    props: {
+            childMsg: {
+                type: Object,
+                default: function () {
+                    return {
+                      background:'#fff',
+                      color:'#000',
+                    };
+                }
+            }
+    },
     data () {
       return {
         msg:'text',

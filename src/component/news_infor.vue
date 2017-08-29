@@ -1,5 +1,6 @@
 <template>
     <main>
+        <my-header :child-msg="new_header"></my-header>
         <section class="news_banner_bg bg">
             <h2>{{newsData.title}}</h2>
             <p>{{newsData.title_en}}</p>
@@ -28,6 +29,10 @@
     export default {
         data () {
             return {
+                new_header:{
+                    'background':'#fff',
+                    'color':'#000',
+                },
                 newsData:{
                     title:' 新闻动态',
                     title_en:'News Information',

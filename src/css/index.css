@@ -68,6 +68,7 @@ header{
     z-index: 9999;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     background: rgba(215, 215, 255, 0.09);
+    color: #fff;
 }
 nav{
     width: 1200px;
@@ -85,19 +86,22 @@ nav a {
     margin: 0 0 0 45px;
     text-decoration: none;
     font-size: 14px;
-    color: #fff;
+    /*color: #fff;*/
 }
 .nav_icon {
 
 }
 .icon_font {
     font-size: 24px;
-    color: #fff;
+    /*color: #fff;*/
     width: 120px;
     margin-left: 12px;
 }
+a:-webkit-any-link {
+    color: currentColor;
+}
 nav a:link{
-    color: #fff;
+    /*color: #fff;*/
 }
 nav a:active,nav a:hover {
     color: red;
@@ -241,6 +245,8 @@ nav a:active,nav a:hover {
     width: 602px;
     position: absolute;
     left: 0px;
+    top: 0;
+    margin-top: 0px;
 }
 .about_box {
     margin-left: 5%;
