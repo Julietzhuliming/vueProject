@@ -18,7 +18,7 @@
                 <div class="month_day">05-25</div>
                 <div class="year">2017</div>
                 <div class="next_img">
-                    <img src="images\/red_r_btn.png"/>
+                    <img src="images/red_r_btn.png"/>
                </div>
             </div>
             <div class="page"></div>

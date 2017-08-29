@@ -4,15 +4,13 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item in sliders.data">
                 <img :src="item.img" width="100%" height="100%" />
-                <div class="slide1_content">
-                    <h2>{{item.text.title}}</h2>
-                    <h3>{{item.text.desc1}}</h3>
-                    <span>{{item.text.desc2}}</span>
+                <div class="slide_content">
+                    <p class="title">{{item.text.title}}</p>
+                    <p class="title">{{item.text.desc1}}</p>
+                    <p class="desc1">{{item.text.desc2}}</p>
+                    <p class="desc1">{{item.text.desc3}}</p>
                     <p>
-                        <span>{{item.text.desc3}}</span>
-                    </p>
-                    <p>
-                        <span>累计为<span>4000</span>客户提供<span>201552</span>次城市环保箱广告解决方案</span>
+                        累计为<span>4000+</span>客户提供<span>201552</span>次城市环保箱广告解决方案
                     </p>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <template>
-<main>
+<main class="home_page">
   <my-header :child-msg="new_header"></my-header>
   <Slidercomponent></Slidercomponent>
   <section class="service">
@@ -7,7 +7,7 @@
         <h2>{{service.title}}</h2>
         <Servicecomponent></Servicecomponent>
         <div class="button_box">
-          <span class="more_button">{{learn_more}}</span>
+          <a href="#/product"><span class="more_button">{{learn_more}}</span></a>
         </div>
   </section>
   <Aboutcomponent></Aboutcomponent>
@@ -16,7 +16,7 @@
         <h2>{{ourcase.title}}</h2>
         <Casecomponent></Casecomponent>
         <div class="button_box">
-            <span class="more_button">{{see_more}}</span>
+            <a href="#/showcase"><span class="more_button">{{see_more}}</span></a>
         </div>
     </section>
 </main>

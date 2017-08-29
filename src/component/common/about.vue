@@ -10,7 +10,7 @@
                 <p class="desc_1">{{aboutus.desc1}}</p>
                 <p class="desc_2">{{aboutus.desc2}}</p>
                 <p class="desc_2">{{aboutus.desc3}}</p>
-                <span class="more_button">{{aboutus.learn_more}}</span>
+                <a href="#/aboutus"><span class="more_button">{{aboutus.learn_more}}</span></a>
             </div>
         </div>
     </section>

@@ -5,7 +5,7 @@
                 <div class="img_title">
                    <span>{{item.text}}</span>
                    <div class="case_img">
-                        <img src="images\/red_r_btn.png"/>
+                        <img src="images/red_r_btn.png"/>
                    </div>
                 </div>
             </div>
