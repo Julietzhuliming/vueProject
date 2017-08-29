@@ -140,7 +140,6 @@ nav a:active,nav a:hover {
     width: 100%;
     background: #fff;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 50px 0px;
     text-align: center;
 }
@@ -150,6 +149,9 @@ nav a:active,nav a:hover {
 .ourCase.menu_left .product_classify .product_type{
     margin-left: 0%;
     margin-right: 4%;
+}
+.ourCase.menu_left {
+    margin: 0 auto;
 }
 .service img{
     width:50px;
@@ -229,7 +231,7 @@ nav a:active,nav a:hover {
 }
 .img_box {
     width: 46%;
-    width: 600px;
+    /*width: 600px;*/
     right: 0;
     margin-top: 30px;
     float: right;
@@ -306,7 +308,6 @@ nav a:active,nav a:hover {
     background:#bd0a0a;
     color:#fff!important;
     outline: none;
-
 }
 .aboutUs .more_button:hover{
     background: #fff;
@@ -331,6 +332,9 @@ nav a:active,nav a:hover {
     max-height: 100%;
     width: 100%;
 }
+.ourCase {
+    margin: 0 auto;
+}
 .ourCase .button_box {
     margin: 20px auto 0;
 }
@@ -343,10 +347,18 @@ nav a:active,nav a:hover {
     text-align: left;
     background: rgba(23, 20, 20, 0.65);
     color: white;
-    display: none;
+    /*display: none;*/
 }
 .case_content>div:hover .img_title{
     display:block;
+}
+.case_img {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 20px;
+    float: right;
+    cursor:pointer;
 }
 footer {
     background: #303030;
@@ -384,6 +396,9 @@ footer {
     height: 300px;
     width: 100%;
     color: #fff;
+}
+.show_case_bg.bg{
+    color:#fff;
 }
 .bg {
     position: relative;
@@ -477,19 +492,30 @@ footer {
     width: 100%;
 }
 .product_classify{padding:0px;}
+.news_infomation .product_classify{
+}
 .product_type{
     border:1px solid rgba(224, 218, 218, 0.62);
     margin-left:4%;
     border-radius:20px;
     width:100px;
-    padding:5px 8px
+    padding:5px 8px;
+    height: 30px;
+    line-height: 30px;
 }
 .product_type:hover{
     background: red;
     color:#fff!important;
+    cursor: pointer;
 }
 .product_service{
-    background:#f1f1f1;
+    margin: 0 auto;
+}
+.service {
+    margin: 0 auto;
+}
+.service.product_service {
+   /*background:#f1f1f1; */
 }
 .product_service .sub_service_content:hover{
     border:1px solid #ddd;
@@ -510,12 +536,26 @@ footer {
     background-position: 0 70px;
     color:#000;
 }
+.news_infomation {
+    margin-bottom: 126px;
+}
 .newsinfor_box {
     max-width: 1200px;
     background: #f7f7f7;
     margin: 0 auto;
     position: relative;
     height: 180px;
+    cursor: pointer;
+}
+
+.news_infomation .product_type {
+    margin-left: 0;
+    margin-right: 4%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.newsinfor_box:nth-child(2n+1){
+    background: #fff;
 }
 .img_content {
     position: absolute;
@@ -537,6 +577,30 @@ footer {
     font-size: 13px;
     color:#999999;
     line-height: 1.8;
+}
+.month_day{
+    position: absolute;
+    top: 55px;
+    right: 40px;
+    width: 52px;
+    font-size: 18px;
+    color: #999999;
+}
+.year{
+    position: absolute;
+    top: 85px;
+    right: 40px;
+    width: 52px;
+    font-size: 12px;
+    color: #999999;
+    text-align: left;
+}
+.next_img{
+    position: absolute;
+    top:132px;
+    right: 50px;
+    color: #999999;
+    cursor: pointer;
 }
 /*新闻动态  end*/
 

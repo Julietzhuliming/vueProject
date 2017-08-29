@@ -6,17 +6,13 @@
         </section>
         <section class="news_infomation">
             <Menucomponent :child-msg="newsData.newsType"></Menucomponent>
-            <div class="newsinfor_box">
+            <div class="newsinfor_box" v-for="item in newsData.newsList">
                 <div class="img_content">
-                    <img src="images\/news.png"/>
+                    <img :src="item.newsImg"/>
                 </div>
                 <div class="news_content">
-                    <div class="news_title">深圳市市委书记、市委宣传部部长一行来倒公司调研</div>
-                    <p class="news_desc">
-                        2017年5月25日上午9时，市委常委、市委宣传部部长、副部长、高新区管委会副巡视员、高新区党工委宣传部部长、高新区党
-                    工委宣传部副部长樊锋昭等领导到三人行公司调研并指导工作。
-                    </p>
-                    
+                    <div class="news_title">{{item.newsTitle}}</div>
+                    <p class="news_desc">{{item.summary}}</p>
                 </div>
                 <div class="month_day">05-25</div>
                 <div class="year">2017</div>
@@ -24,40 +20,7 @@
                     <img src="images\/red_r_btn.png"/>
                </div>
             </div>
-            <div class="newsinfor_box">
-               <div class="img_content">
-                    <img src="images\/news.png"/>
-               </div>
-               <div class="news_content">
-                    <div class="news_title">深圳市市委书记、市委宣传部部长一行来倒公司调研</div>
-                    <p class="news_desc">
-                        2017年5月25日上午9时，市委常委、市委宣传部部长、副部长、高新区管委会副巡视员、高新区党工委宣传部部长、高新区党
-                    工委宣传部副部长樊锋昭等领导到三人行公司调研并指导工作。
-                    </p>
-                    <div>05-25</div>
-                    <div>2017</div>
-                    <div class="img_content">
-                        <img src="images\/red_r_btn.png"/>
-                   </div>
-               </div>
-            </div>
-            <div class="newsinfor_box">
-               <div class="img_content">
-                    <img src="images\/news.png"/>
-               </div>
-               <div class="news_content">
-                    <div class="news_title">深圳市市委书记、市委宣传部部长一行来倒公司调研</div>
-                    <p class="news_desc">
-                        2017年5月25日上午9时，市委常委、市委宣传部部长、副部长、高新区管委会副巡视员、高新区党工委宣传部部长、高新区党
-                    工委宣传部副部长樊锋昭等领导到三人行公司调研并指导工作。
-                    </p>
-                    <div>05-25</div>
-                    <div>2017</div>
-                    <div class="img_content">
-                        <img src="images\/red_r_btn.png"/>
-                   </div>
-               </div>
-            </div>
+            <div class="page"></div>
         </section>
     </main>
 </template>
@@ -76,39 +39,33 @@
                     newsList:[
                         {
                             newsID:'1',
-                            newsTitle:'我是女王我是女王我是女王女王女王',
-                            logoUrl:'images\/case.png',
+                            newsTitle:'深圳市市委书记、市委宣传部部长一行来倒公司调研',
+                            newsImg:'images\/news.png',
                             time:'2017 05-25',
-                            summary:'我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王'
+                            summary:'2017年5月25日上午9时，市委常委、市委宣传部部长、副部长、高新区管委会副巡视员、高新区党工委宣传部部长、高新区党工委宣传部副部长樊锋昭等领导到三人行公司调研并指导工作。'
                         },
                         {
                             newsID:'1',
-                            newsTitle:'我是女王我是女王我是女王女王女王',
-                            logoUrl:'images\/case.png',
+                            newsTitle:'深圳市市委书记、市委宣传部部长一行来倒公司调研',
+                            newsImg:'images\/news.png',
                             time:'2017 05-25',
-                            summary:'我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王'
+                            summary:'2017年5月25日上午9时，市委常委、市委宣传部部长、副部长、高新区管委会副巡视员、高新区党工委宣传部部长、高新区党工委宣传部副部长樊锋昭等领导到三人行公司调研并指导工作。'
                         },
                         {
                             newsID:'1',
-                            newsTitle:'我是女王我是女王我是女王女王女王',
-                            logoUrl:'images\/case.png',
+                            newsTitle:'深圳市市委书记、市委宣传部部长一行来倒公司调研',
+                            newsImg:'images\/news.png',
                             time:'2017 05-25',
-                            summary:'我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王'
+                            summary:'2017年5月25日上午9时，市委常委、市委宣传部部长、副部长、高新区管委会副巡视员、高新区党工委宣传部部长、高新区党工委宣传部副部长樊锋昭等领导到三人行公司调研并指导工作。'
                         },
                         {
                             newsID:'1',
-                            newsTitle:'我是女王我是女王我是女王女王女王',
-                            logoUrl:'images\/case.png',
+                            newsTitle:'深圳市市委书记、市委宣传部部长一行来倒公司调研',
+                            newsImg:'images\/news.png',
                             time:'2017 05-25',
-                            summary:'我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王'
+                            summary:'2017年5月25日上午9时，市委常委、市委宣传部部长、副部长、高新区管委会副巡视员、高新区党工委宣传部部长、高新区党工委宣传部副部长樊锋昭等领导到三人行公司调研并指导工作。'
                         },
-                        {
-                            newsID:'1',
-                            newsTitle:'我是女王我是女王我是女王女王女王',
-                            logoUrl:'images\/case.png',
-                            time:'2017 05-25',
-                            summary:'我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王我是女王我是女王我是女王女王女王'
-                        }
+                        
                     ]
                 }
             }

@@ -1,7 +1,7 @@
 <template>
     <main>
         <section class="contain_image_head"></section>
-        <section class="ourCase">
+        <section class="ourCase product_service">
             <h2>{{product.title}}</h2>
             <h6>{{product.sub_title}}</h6>
             <Menucomponent></Menucomponent>
