@@ -1,23 +1,47 @@
 <template>
     <div class="product_classify flex">
-        <div class="product_type" v-for="item in childMsg">
-            <span>{{item.Title}}</span>
+        <div class="product_type" v-for="item in menuList.data">
+            <span>{{item.keyword}}</span>
         </div>
     </div>
 </template>
 <script>
-    export default {
-        props: {
-            childMsg: {
-                type: Array,
-                default: [
-                            {ID:"1",Title:"商业街道",Url:""},
-                            {ID:"2",Title:"步行街",Url:""},
-                            {ID:"3",Title:"广场",Url:""},
-                            {ID:"4",Title:"飞机场",Url:""},
-                            {ID:"5",Title:"火车站",Url:""}
-                    ] //这样可以指定默认的值
+import Vue from 'vue';
+import axios from 'axios';
+Vue.prototype.$http = axios;
+export default {
+    mounted: function() {
+        this.init();
+    },
+    methods:{
+        init:function(){
+            var that = this;
+            debugger;
+            console.log(that.childMsg);
+            axios.get('./channelList.json?channel='+that.childMsg).then(function (response) {
+                console.log(response);
+                if(response.data.retCode=='0000'){
+                    Vue.set(that.menuList, 'data', response.data.data);
+                    console.log(response.data.data);
+                }
+            }).catch(function (response) {
+                console.log(response);
+            });
+        },
+    },
+    props: {
+        childMsg: {
+            type: String,
+            default: "CASE"
+        }
+    },
+    data () {
+      return {
+            menuList:{
+                data:[
+                ]
             }
         }
     }
+}
 </script>

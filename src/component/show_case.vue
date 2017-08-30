@@ -22,12 +22,7 @@
       	 ourcase:{
                 title:'案例展示',
                 title_en:"Case",
-                caseType:[
-                    {ID:"1",Title:"全部",Url:""},
-                    {ID:"2",Title:"八达岭长城",Url:""},
-                    {ID:"3",Title:"石林峡景区",Url:""}
-                ],
-
+                caseType:'CASE'
             }
       }
     }

@@ -321,7 +321,7 @@ nav a:active,nav a:hover {
     color: #303030;
 }
 .contact_us .desc span {
-    color:999999;
+    color:#999999;
 }
 .contactus_container {
     position: relative;
@@ -377,6 +377,9 @@ nav a:active,nav a:hover {
     text-align: center;
     margin: 15px 2.5%;
     position: relative;
+    max-width: 350px;
+    max-height: 235px;
+    overflow: hidden;
 }
 .case_content img {
     max-width: 100%;
@@ -416,26 +419,41 @@ nav a:active,nav a:hover {
     cursor:pointer;
 }
 footer {
-    background: #303030;
-    height: 320px;
+    background: #f1f1f1;
+    /* height: 320px; */
     font-size: 0.9em;
     color: #717171;
 }
 .footer_container {
     max-width: 1200px;
-    padding: 30px 0px 20px;
+    padding: 20px 0px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(221, 221, 221, 0.45);
+    display:-moz-box; /* Firefox */
+    display:-webkit-box; /* Safari and Chrome */
+    display:-ms-flexbox;/* WP IE 10 */
 }
-.footer_container>div {
-    width: 33%;
-    display: inline-block;
+
+.box1{
+    text-align:center;
+    -moz-box-flex:1.0; /* Firefox */
+    -webkit-box-flex:1.0; /* Safari and Chrome */
+    box-flex:1.0;
 }
+.box1 img{width:45px;}
 .beizhu {
-    max-width: 1200px;
-    padding: 20px 0px 30px;
-    margin: 0 auto;
+    width:100%;
+    background: #ddd;
+    border-top: 1px solid rgba(221, 221, 221, 0.45);
 }
+.beizhu>div{
+    max-width: 1200px;
+    margin: 0px auto;
+    position: relative;
+    height: 52px;
+}
+.beizhu>div p{position: absolute;left: 6%;top: 7px;font-size: 12px;}
+.beizhu>div img{position: absolute;right: 7%;top: 14px;width: 25px;height: 25px;}
+
 .menu_about {
     background: url('./../images/about_banner_bg.png');
     height: 300px;
@@ -689,4 +707,56 @@ footer {
     color: #989898;
     text-align: center;
     width: 138px;
+}
+.news_infor a{
+    text-decoration: none;
+}
+/* 新闻详情  begin*/
+.pre_next_sign, .news_detail_content_class{width:100%;max-width: 1200px;margin: 0 auto;}
+.news_detail_head{
+    background: #f5f5f5;
+    margin-top: 0;
+    text-align: center;
+    height: 160px;
+    padding-top: 90px;
+}
+.news_detail_head .title {
+    color:#303030;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 55px;
+}
+.news_detail_head .desc {
+    color: #999;
+    font-size: 12px;
+    margin: 10px;
+    padding: 0;
+    font-weight: normal;
+}
+.news_detail_footer{
+    padding:12px 0px;
+    width:100%;
+    border-top: 1px solid #f1f1f1;
+    font-size:14px;
+}
+.pre_next_sign img{width:30px;height:30px;}
+.pre_next_sign .previous{width:50%;float:left;text-align:left;position: relative;}
+.pre_next_sign span{
+    position: absolute;
+    top: 10px;
+}
+.pre_next_sign .previous span{
+    left: 45px;
+}
+.pre_next_sign .next{text-align: right;position: relative;}
+.pre_next_sign .next span{
+    right: 45px;
+    color:#999999;
+    font-size: 14.43px
+}
+/* 新闻详情  end*/
+.case_content>div:hover{
+    -webkit-transform:scale(1.2,1.2);
+    -moz-transform:scale(1.2,1.2);
+    transform:scale(1.2,1.2);
 }
