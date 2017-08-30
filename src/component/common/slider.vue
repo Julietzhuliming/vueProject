@@ -3,16 +3,7 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item in sliders.data">
-                <img :src="item.img" width="100%" height="100%" />
-                <div class="slide_content">
-                    <p class="title">{{item.text.title}}</p>
-                    <p class="title">{{item.text.desc1}}</p>
-                    <p class="desc1">{{item.text.desc2}}</p>
-                    <p class="desc1">{{item.text.desc3}}</p>
-                    <p>
-                        累计为<span>4000+</span>客户提供<span>201552</span>次城市环保箱广告解决方案
-                    </p>
-                </div>
+                <img :src="item.accessUrl" width="100%" height="100%"/>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -22,25 +13,50 @@
   </section>
 </template>
 <script>
-  export default {
+import Vue from 'vue';
+import axios from 'axios';
+Vue.prototype.$http = axios;
+export default {
+    mounted: function() {
+        this.init();
+        this.swiperFun();        
+    },
+    methods:{
+        init:function(){
+            var that = this;
+            axios.get('./showBanner.json').then(function (response) {
+                console.log(response);
+                if(response.data.retCode=='0000'){
+                    Vue.set(that.sliders, 'data', response.data.data);
+                    console.log(that.sliders.data[0]['accessUrl']);
+                }
+            }).catch(function (response) {
+                console.log(response);
+            });
+        },
+        swiperFun:function(){
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: 5000,//可选选项，自动滑动
+                direction: 'horizontal',
+                loop: true,
+                // 如果需要分页器
+                pagination: '.swiper-pagination',
+                // 如果需要前进后退按钮
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+            });
+        },
+    },
     data () {
-      return {
+        return {
             sliders:{
-                title:'',
                 data:[
-                        {
-                            img:'images\/banner_01.jpg',
-                            text:{
-                                title:'城市智能保洁箱广告',
-                                desc1:'解决方案领导者',
-                                desc2:'创建绿色环保的智慧城市，促进城市环保公益',
-                                desc3:'北京、上海、广州、深圳全覆盖',
-                                desc4:''
-                            }
-                        }
+                    {
+                        // accessUrl:'images/banner_01.jpg'
+                    }
                 ]
-            }
+            },
         }
     }
-  }
+}
 </script>

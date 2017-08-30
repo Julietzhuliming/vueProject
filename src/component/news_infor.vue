@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="news_infor">
         <my-header :child-msg="new_header"></my-header>
         <section class="news_banner_bg bg">
             <h2>{{newsData.title}}</h2>
@@ -9,11 +9,11 @@
             <Menucomponent :child-msg="newsData.newsType"></Menucomponent>
             <div class="newsinfor_box" v-for="item in newsData.newsList">
                 <div class="img_content">
-                    <img :src="item.newsImg"/>
+                    <a href="#/newsdetail"><img :src="item.newsImg"/></a>
                 </div>
                 <div class="news_content">
-                    <div class="news_title">{{item.newsTitle}}</div>
-                    <p class="news_desc">{{item.summary}}</p>
+                    <a href="#/newsdetail"><div class="news_title">{{item.newsTitle}}</div></a>
+                    <a href="#/newsdetail"><p class="news_desc">{{item.summary}}</p></a>
                 </div>
                 <div class="month_day">05-25</div>
                 <div class="year">2017</div>

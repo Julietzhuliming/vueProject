@@ -1,45 +1,45 @@
 <template>
-        <div class="case_content">
-            <div v-for="item in ourcase.data">
-                <img :src="item.img"/>
-                <div class="img_title">
-                   <span>{{item.text}}</span>
-                   <div class="case_img">
-                        <img src="images/red_r_btn.png"/>
-                   </div>
-                </div>
+    <div class="case_content">
+        <div v-for="item in ourcase.data">
+            <img :src="item.logoUrl"/>
+            <div class="img_title">
+               <span>{{item.articleTitle}}</span>
+               <div class="case_img">
+                    <img src="images/red_r_btn.png"/>
+               </div>
             </div>
         </div>
+    </div>
 </template>
 <script>
-  export default {
+import Vue from 'vue';
+import axios from 'axios';
+Vue.prototype.$http = axios;
+export default {
+    mounted: function() {
+        this.init();
+    },
+    methods:{
+        init:function(){
+            var that = this;
+            axios.get('./articleIndex.json').then(function (response) {
+                console.log(response);
+                if(response.data.retCode=='0000'){
+                    Vue.set(that.ourcase, 'data', response.data.data);
+                    console.log(that.ourcase.data[0]['articleTitle']);
+                }
+            }).catch(function (response) {
+                console.log(response);
+            });
+        },
+    },
     data () {
       return {
             ourcase:{
                 data:[
-                        {
-                            img:'images\/case.png',
-                            text:'八达岭长城'
-                        },
-                        {
-                            img:'images\/case.png',
-                            text:'八达岭长城'
-                        },
-                        {
-                            img:'images\/case.png',
-                            text:'八达岭长城'
-                        },
-                        {
-                            img:'images\/case.png',
-                            text:'八达岭长城'
-                        },
-                        {
-                            img:'images\/case.png',
-                            text:'八达岭长城'
-                        }
                 ]
             }
         }
     }
-  }
+}
 </script>
