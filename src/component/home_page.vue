@@ -14,17 +14,21 @@
   <section class="ourCase">
         <p>our case</p>
         <h2>{{ourcase.title}}</h2>
-        <Casecomponent></Casecomponent>
+        <Casecomponent :child-msg="channel"></Casecomponent>
         <div class="button_box">
-            <a href="#/showcase"><span class="more_button">{{see_more}}</span></a>
+            <a href="#/showcase">
+              <span class="more_button">{{see_more}}</span>
+            </a>
         </div>
     </section>
 </main>
 </template>
 <script>
   export default {
+
     data () {
       return {
+            channel:'index',
             new_header:{
                 'background':'transparent',
                 'color':'#fff',

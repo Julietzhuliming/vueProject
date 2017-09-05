@@ -3,7 +3,7 @@
         <my-header :child-msg="new_header"></my-header>
 		<section class="menu_about"></section>
 		<div class="aboutUs_container">
-			<h2 class="who_we about_lws">{{aboutwls.title}}</h2>
+			<h2 class="about_lws">{{aboutwls.title}}</h2>
 			<div class="about_box about_lws_desc">
 				<p class="desc_2" v-for="item in aboutwls.data">{{item.text}}</p>
 			</div>
@@ -11,12 +11,14 @@
 				<img :src="aboutwls.img" width="100%"/>
 			</div>
 		</div>
-		<div class="cultural_idea">
-			<h2 class="who_we about_lws">{{cultural_idea.title}}</h2>
-			<div class="idea_box" v-for="item in cultural_idea.data">
-				<span class="title">{{item.title}}</span>
-				<span class="desc">{{item.desc}}</span>
-				<p class="detail_desc">{{item.detail}}</p>
+		<div class="about_us_cultural_idea">
+			<div class="cultural_idea">
+				<h2 class="about_lws">{{cultural_idea.title}}</h2>
+				<div class="idea_box" v-for="item in cultural_idea.data">
+					<span class="title">{{item.title}}</span>
+					<span class="desc">{{item.desc}}</span>
+					<p class="detail_desc">{{item.detail}}</p>
+				</div>
 			</div>
 		</div>
 	</main>
@@ -27,14 +29,15 @@
       return {
         new_header:{
             'background':'transparent',
-            'color':'#fff',
+            'color':'#000',
+            'border-bottom':'1px solid rgba(0, 0, 0, 0.22)'
         },
       	aboutwls:{
-                title:'关于维纳斯',
+                title:'深圳市维纳斯互动娱乐有限公司',
                 img:'images\/about_intro.png',
                 data:[
                     {
-                      text:'深圳市维纳斯互动娱乐有限公司成立于2013年6月，是一家从事互联网广告宣传与投放的传媒公司。2015年维纳斯整合各优势资源成立“智能保洁箱”项目转型成为一家专业的城市户外保洁箱广告传媒。转型以来一直本着绿色智能环保、零排放、零能源成本、可持续发展、美化城市街道及无成本照明的理念，将智能环保与广告相融合。'  
+                      text:'深圳市维纳斯互动娱乐有限公司成立于2013年6月，是一家从事互联网广告宣传与投放的传媒公司。2015年维纳斯整合各优势资源成立“智能保洁箱”项目转型成为一家专业的城市户外保洁箱广告传媒。转型以来一直本着绿色智能环保、零排放、零能源成本、可持续发展、美化城市街道及无成本照明的理念，将智能环保与广告相融合。'
                     },
                     {
                       text:'从2015年起，维纳斯快速切入环保广告领域，已与全国多地政府部门、加油站、大型企业单位、旅游公司签订合作协议。更于2016年成功布局八达岭长城，成为全国首家环保领域与其合作的传媒企业。'  

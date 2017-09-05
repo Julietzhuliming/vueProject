@@ -35,11 +35,11 @@
             </div>
             <div class="box1">
                 <img src="images\/fico2.png"/>
-                <h5>商务电话：13333333333</h5>
+                <h5>商务电话：18938889177</h5>
             </div>
             <div class="box1">
                 <img src="images/fico3.png"/>
-                <h5>联系邮箱：11111111@qq.com</h5>
+                <h5>联系邮箱：125223879@qq.com</h5>
             </div>
             <div class="box1">
                 <img src="images\/qrcode.png"/>
@@ -48,7 +48,7 @@
         </div>
         <div class="beizhu">
             <div>
-                <p>@2017深圳维纳斯娱乐互动有限公司</p>
+                <p>2017深圳维纳斯娱乐互动有限公司</p>
                 <img src="images/logo_icon_footer.png"/>
             </div>
         </div>

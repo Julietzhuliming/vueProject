@@ -7,14 +7,17 @@
     </section>
 		<section class="ourCase menu_left">
             <Menucomponent :child-msg="ourcase.caseType"></Menucomponent>
-            <Casecomponent ></Casecomponent>
+            <Casecomponent :child-msg="channel"></Casecomponent>
         </section>
 	</main>
 </template>
 <script>
   export default {
+    methods:{
+    },
     data () {
       return {
+        channel:'list',
         new_header:{
             'background':'#fff',
             'color':'#000',

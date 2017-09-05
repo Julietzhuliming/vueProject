@@ -1,7 +1,7 @@
 <template>
   <section class="swiper_slider">
     <div class="swiper-container">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" v-if="sliders.data.length>0">
             <div class="swiper-slide" v-for="item in sliders.data">
                 <img :src="item.accessUrl" width="100%" height="100%"/>
             </div>
@@ -19,7 +19,7 @@ Vue.prototype.$http = axios;
 export default {
     mounted: function() {
         this.init();
-        this.swiperFun();        
+        this.swiperFun();
     },
     methods:{
         init:function(){
@@ -28,7 +28,8 @@ export default {
                 console.log(response);
                 if(response.data.retCode=='0000'){
                     Vue.set(that.sliders, 'data', response.data.data);
-                    console.log(that.sliders.data[0]['accessUrl']);
+                    console.log(that.sliders.data);
+                    that.swiperFun();                                                         
                 }
             }).catch(function (response) {
                 console.log(response);
@@ -50,11 +51,7 @@ export default {
     data () {
         return {
             sliders:{
-                data:[
-                    {
-                        // accessUrl:'images/banner_01.jpg'
-                    }
-                ]
+                data:[]
             },
         }
     }

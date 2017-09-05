@@ -6,7 +6,7 @@
             <h2>{{product.title}}</h2>
             <h6>{{product.sub_title}}</h6>
             <Menucomponent :child-msg="product.productType"></Menucomponent>
-            <Casecomponent></Casecomponent>
+            <Productcomponent ></Productcomponent>
         </section>
         <section class="service product_service">
                 <h2>{{service.title}}</h2>
@@ -26,13 +26,7 @@
                 product:{
                     title:'产品展示',
                     sub_title:"在一个互联网+时代不断探索数字营销无线可能，立足国际视野之上的创新型营销方式，在瞬息万变中与具有创新精神的客户一同成长",
-                    productType:[
-                        {ID:"1",Title:"商业街道",Url:""},
-                        {ID:"2",Title:"步行街",Url:""},
-                        {ID:"3",Title:"广场",Url:""},
-                        {ID:"4",Title:"飞机场",Url:""},
-                        {ID:"5",Title:"火车站",Url:""}
-                    ]
+                    productType:'PRODUCT'
                 },
                 service:{
                     title:'优势服务',

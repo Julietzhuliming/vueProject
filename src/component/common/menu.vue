@@ -1,7 +1,8 @@
 <template>
     <div class="product_classify flex">
-        <div class="product_type" v-for="item in menuList.data">
-            <span>{{item.keyword}}</span>
+        <div id="product00" :class="'product_type '+(cur_select_id==''?'active':'')"  @click="submit('')"><span :key="">全部</span></div>
+        <div :id="'product'+item.id" v-for="item in menuList.data" @click="submit(item.id)" :class="'product_type '+(cur_select_id==item.id?'active':'')" >
+            <span :key="item.id" >{{item.keyword}}</span>
         </div>
     </div>
 </template>
@@ -14,9 +15,14 @@ export default {
         this.init();
     },
     methods:{
+        submit(id) {
+            // 事件名字自定义，用不同的名字区别事件
+            this.$root.Bus.$emit('changeType', id);
+            console.log("menu---->"+id);
+            this.cur_select_id = id;
+        },
         init:function(){
             var that = this;
-            debugger;
             console.log(that.childMsg);
             axios.get('./channelList.json?channel='+that.childMsg).then(function (response) {
                 console.log(response);
@@ -37,9 +43,9 @@ export default {
     },
     data () {
       return {
+            cur_select_id:'',
             menuList:{
-                data:[
-                ]
+                data:[]
             }
         }
     }
