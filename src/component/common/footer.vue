@@ -31,19 +31,19 @@
         <div class="footer_container">
             <div class="box1">
                 <img src="images\/fico1.png"/>
-                <h5>地址：深圳市南山区蛇口工业六路蛇口网谷<p style="margin:0px;">创业一号大楼C座101</p></h5>
+                <span>地址：深圳市南山区蛇口工业六路蛇口网谷<p style="margin:0px;">创业一号大楼C座101</p></span>
             </div>
             <div class="box1">
                 <img src="images\/fico2.png"/>
-                <h5>商务电话：18938889177</h5>
+                <span>商务电话：18938889177</span>
             </div>
             <div class="box1">
                 <img src="images/fico3.png"/>
-                <h5>联系邮箱：125223879@qq.com</h5>
+                <span>联系邮箱：125223879@qq.com</span>
             </div>
             <div class="box1">
                 <img src="images\/qrcode.png"/>
-                <h5>微信公众号</h5>
+                <span>微信公众号</span>
             </div>
         </div>
         <div class="beizhu">

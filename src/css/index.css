@@ -167,6 +167,7 @@ nav a:active,nav a:hover {
     width: 100%;
     height: 1px;
 }
+
 .content_public_class{
     width: 100%;
     background: #fff;
@@ -270,7 +271,7 @@ nav a:active,nav a:hover {
     cursor:pointer;
 }
 .aboutUs {
-    background: #f1f1f1;
+    background: #ddd;
     width: 100%;
     text-align: center;
     padding: 60px 0;
@@ -281,10 +282,12 @@ nav a:active,nav a:hover {
     margin: 0 auto;
     padding: 35px 0px 150px 0px;
 }
+
 .home_page .aboutUs_container {
     margin:0 auto;
     padding:0;
 }
+
 .aboutUs_container .about_lws{color:#000;font-size: 20px;}
 
 .img_box, .about_box {
@@ -373,9 +376,7 @@ nav a:active,nav a:hover {
     color:#bd0a0a!important;
     border:1px solid #bd0a0a;
 }
-.aboutUs .more_button:after{
 
-}
 .case_content {
     text-align: left;
     margin: 36px -2.16% 20px;
@@ -394,6 +395,11 @@ nav a:active,nav a:hover {
     max-height: 100%;
     width: 100%;
     cursor: pointer;
+}
+.case_content>div:hover{
+    -webkit-transform:scale(1.2,1.2);
+    -moz-transform:scale(1.2,1.2);
+    transform:scale(1.2,1.2);
 }
 .ourCase {
     margin: 0 auto;
@@ -455,7 +461,8 @@ footer {
     -webkit-box-flex:1.0; /* Safari and Chrome */
     box-flex:1.0;
 }
-.box1 img{width:45px;}
+.box1 img{width:45px;margin-bottom:10px;}
+.box1 span{display:block;font-size:12px;}
 .beizhu {
     width:100%;
     background: #ddd;
@@ -472,7 +479,9 @@ footer {
 
 .menu_about {
     background: url('./../images/about_banner_bg.png') no-repeat;
+
     height: 760px;
+
     width: 100%;
     background-size: cover;
 }
@@ -730,6 +739,7 @@ footer {
 
 /*新闻动态  end*/
 /* 新闻详情  begin*/
+
 .pre_next_sign, .news_detail_content_class{width:100%;max-width: 1200px;margin: 10px auto;}
 .news_detail_head{
     background: #f7f7f7;
@@ -737,6 +747,14 @@ footer {
     text-align: center;
     padding:20px 0px;
 }
+
+.news_detail_footer{
+    padding:8px 0px;
+    width:100%;
+    border-top: 1px solid #f1f1f1;
+    font-size:12px;
+}
+
 
 .pre_next_sign img{width:30px;height:30px;}
 .pre_next_sign .previous{width:50%;float:left;text-align:left;position: relative;}
@@ -747,6 +765,7 @@ footer {
 .pre_next_sign .previous span{
     left: 45px;
 }
+
 .pre_next_sign .next{
     text-align: right;
     position: relative;
