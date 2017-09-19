@@ -1,6 +1,6 @@
 <template>
 <main>
-    <my-header :child-msg="new_header"></my-header>
+    <my-header></my-header>
 	<section class="news_detail_head">
         <h2 class="title">{{new_detail.data.title}}</h2>
         <h6 class="desc">{{new_detail.data.issuedTime}}</h6>
@@ -24,9 +24,7 @@
         </div>
     </section>
 </main>
-
 </template>
-
 <script>
 import Vue from 'vue';
 import axios from 'axios';
@@ -40,7 +38,6 @@ export default {
         this.$root.Bus.$off('showNewsDetail')
     },
     mounted: function() {
-        console.log('------>' + this.$route.query.id);
         var id = this.$route.query.id;
         this.type = this.$route.query.type;
         this.init(id);
@@ -54,7 +51,6 @@ export default {
             axios.get('./showDetail.json?id='+id).then(function (response) {
                 if(response.status=='200'){
                     Vue.set(that.new_detail, 'data', response.data.data);
-                    console.log(response.data.data);
                 }
             }).catch(function (response) {
                 console.log(response);
@@ -63,10 +59,8 @@ export default {
     },
     data () {
         return {
-            new_header:{
-                'background':'#fff',
-                'color':'#000',
-            },
+            type:'',
+            id:'',
             new_detail:{
                 data:{
                     id:'',

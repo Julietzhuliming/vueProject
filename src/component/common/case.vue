@@ -33,7 +33,11 @@ export default {
     methods:{
         showDetail(id) {
             console.log("showDetail---->"+id);
-            this.$router.push({ path: '/detail', query: {id:id,type:'case'}});
+            var obj = {
+                id:id,
+                type:"case"
+            };
+            this.$router.push({ path: '/detail', query: obj});
         },
         typeChange:function(typeid){
             console.log('222--->'+typeid);
@@ -45,10 +49,8 @@ export default {
                 typeid = '';
             }
             axios.get('./caseList.json?channel='+that.childMsg+'&keyID='+typeid).then(function (response) {
-                console.log(response);
                 if(response.data.retCode=='0000'){
                     Vue.set(that.ourcase, 'data', response.data.data);
-                    console.log(that.ourcase.data[0]['caseTitle']);
                 }
             }).catch(function (response) {
                 console.log(response);

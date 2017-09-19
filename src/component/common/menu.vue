@@ -25,10 +25,8 @@ export default {
             var that = this;
             console.log(that.childMsg);
             axios.get('./channelList.json?channel='+that.childMsg).then(function (response) {
-                console.log(response);
                 if(response.data.retCode=='0000'){
                     Vue.set(that.menuList, 'data', response.data.data);
-                    console.log(response.data.data);
                 }
             }).catch(function (response) {
                 console.log(response);

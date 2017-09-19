@@ -1,6 +1,6 @@
 <template>
     <main>
-        <my-header :child-msg="new_header"></my-header>
+        <my-header></my-header>
 		<section class="menu_about"></section>
 		<div class="aboutUs_container">
 			<h2 class="about_lws">{{aboutwls.title}}</h2>
@@ -27,11 +27,6 @@
   export default {
     data () {
       return {
-        new_header:{
-            'background':'transparent',
-            'color':'#000',
-            'border-bottom':'1px solid rgba(0, 0, 0, 0.22)'
-        },
       	aboutwls:{
                 title:'深圳市维纳斯互动娱乐有限公司',
                 img:'images\/about_intro.png',
@@ -53,27 +48,27 @@
                     {
                         title:'经营宗旨和使命',
                         desc:'purpose and mission',
-                        detail:'维纳斯的经营宗旨和使命是努力成为中国城市保洁箱广告解决方案的领导者，为政府、企业、消费者提供最有质量和最有保障的广告平台。'
+                        detail:'维纳斯的经营宗旨和使命是努力为中国城市提供智能保洁箱解决方案及广告营销解决方案，为政府、企业、消费者提供最有质量和最有保障的平台。'
                     },
                     {
                         title:'企业的发展原则',
                         desc:'development principles',
-                        detail:'维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使'
+                        detail:'以维纳斯的资源整合能力，为政府、企业、消费者提供更好的科技环保解决方案，实现实体经济向广告经济的转变。'
                     },
                     {
                         title:'核心竞争力',
                         desc:'Core competitivesness',
-                        detail:'维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使'
+                        detail:'科技环保+创意广告'
                     },
                     {
                         title:'我们的观念',
                         desc:'Our concept',
-                        detail:'维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使'
+                        detail:'坚决反对站在资源浪费和环境破坏基础下的商业模式，建立一种科技化、环保化的新经济。'
                     },
                     {
                         title:'我们的态度',
                         desc:'Our attitude',
-                        detail:'维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使命是努力成为，维纳斯的经营宗旨和使'
+                        detail:'为适应市场并满足我们对健康幸福生活方式的需求，做出终其一生的努力而为之奋斗。'
                     }
                 ]
             }

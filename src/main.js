@@ -16,6 +16,7 @@ import ShowCase from './component/show_case.vue';
 import NewsInfor from './component/news_infor.vue';
 import ContactUs from './component/contact_us.vue';
 import Newsdetail from './component/news_detail.vue';
+import HomeNav from './component/home_nav.vue';
 
 
 require("./lib/swiper/swiper.min.js");
@@ -34,6 +35,7 @@ Vue.component('Productcomponent', Product);
 Vue.component('Slidercomponent', Slider);
 Vue.component('Aboutcomponent', About);
 Vue.component('Menucomponent', Menu);
+Vue.component('HomeNav', HomeNav);
 
 const routes = [
     { path: '/', component: HomePage },
@@ -51,12 +53,50 @@ const router = new VueRouter({
 });
 const app = new Vue({
     el: '#app',
-    data: {
-        Bus: new Vue(),
+    data() {
+        return {
+            Bus: new Vue(),
+            scroll: ''
+        }
     },
-    mounted: function() {
+    created() {
+        window.addEventListener('scroll', this.menu);    
     },
-    methods:{
+    methods: {
+        scrollEvent() {
+            window.onscroll= function(){
+                console.log('scrolling...');
+            };
+        }
+    },
+    mounted() {
+        this.scrollEvent();
     },
     router
 }).$mount('#app');
+
+window.onload = function () {  
+  //接着利用我们自己封装的函数给div绑定事件，  
+  var oDiv = document.getElementById('app');  
+  addEvent(oDiv,'scroll',onscroll);  
+  // addEvent(oDiv,'DOMonscroll',onscroll);  
+  // 当滚轮事件发生时，执行onMouseWheel这个函数  
+  function onscroll(e) {
+    var ele = document.getElementById('header');
+    var top = oDiv.scrollTop;
+    console.log(top);
+    if(top == 0){
+        ele.style.background = 'transparent';
+    }else {
+        ele.style.background = 'rgba(0, 0, 0, 0.42)';
+    }
+  }  
+}   
+function addEvent(obj,xEvent,fn) {  
+    if(obj.attachEvent){  
+      obj.attachEvent('on'+xEvent,fn);  
+    }else{  
+      obj.addEventListener(xEvent,fn,false);  
+    }  
+}
+

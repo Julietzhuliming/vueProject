@@ -1,5 +1,5 @@
 <template>
-  <section class="swiper_slider">
+  <section class="swiper_slider" id="home_header">
     <div class="swiper-container">
         <div class="swiper-wrapper" v-if="sliders.data.length>0">
             <div class="swiper-slide" v-for="item in sliders.data">
@@ -7,8 +7,8 @@
             </div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev flex"><img src="images/arrow_l.png"/></div>
+        <div class="swiper-button-next flex"><img src="images/arrow_r.png"/></div>
     </div>
   </section>
 </template>
@@ -19,17 +19,15 @@ Vue.prototype.$http = axios;
 export default {
     mounted: function() {
         this.init();
-        this.swiperFun();
+        // this.swiperFun();
     },
     methods:{
         init:function(){
             var that = this;
             axios.get('./showBanner.json').then(function (response) {
-                console.log(response);
                 if(response.data.retCode=='0000'){
                     Vue.set(that.sliders, 'data', response.data.data);
-                    console.log(that.sliders.data);
-                    that.swiperFun();                                                         
+                    Vue.nextTick(that.swiperFun) ;                                                    
                 }
             }).catch(function (response) {
                 console.log(response);

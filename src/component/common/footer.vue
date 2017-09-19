@@ -42,8 +42,15 @@
                 <span>联系邮箱：125223879@qq.com</span>
             </div>
             <div class="box1">
-                <img src="images\/qrcode.png"/>
-                <span>微信公众号</span>
+                <div class="box_one_div">
+                    <img src="images\/qrcode.png"/>
+                     <span>微信公众号</span>
+                </div>   
+                <div>
+                    <img src="images\/qrcode.png"/>
+                     <span>微信公众号</span>
+                </div>             
+               
             </div>
         </div>
         <div class="beizhu">

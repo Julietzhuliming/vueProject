@@ -1,9 +1,7 @@
 <template>
     <main class="news_infor">
-        <my-header :child-msg="new_header"></my-header>
+        <my-header></my-header>
         <section class="news_banner_bg bg">
-            <h2>{{newsData.title}}</h2>
-            <p>{{newsData.title_en}}</p>
         </section>
         <section class="news_infomation">
             <Menucomponent :child-msg="newsData.newsType"></Menucomponent>
@@ -15,8 +13,8 @@
                     <div class="news_title">{{item.newsTitle}}</div>
                     <p class="news_desc">{{item.summary}}</p>
                 </div>
-                <div class="month_day">05-25</div>
-                <div class="year">2017</div>
+                <div class="month_day">{{item.time.substring(5,10)}}</div>
+                <div class="year">{{item.time.substring(0,4)}}</div>
                 <div class="next_img" @click="showDetail(item.newsID)">
                     <img src="images\/red_r_btn.png"/>
                </div>
@@ -82,15 +80,11 @@ export default {
         showDetail(id) {
             // 事件名字自定义，用不同的名字区别事件
             console.log("showNewsDetail---->"+id);
-            this.$router.push({ path: '/detail', query: {id:id,type:'news'}});
+            this.$router.push({ path: '/detail', query: {id:id, type:'news'}});
         },
         goto:function(index){
             console.log("===>"+index);
-            // if(index == this.newsData.current) return;
             this.newsData.current = index;
-            console.log('newsData.showItem----->'+this.newsData.showItem);
-            console.log('newsData.allpage----->'+this.newsData.allpage);
-            console.log('newsData.current----->'+this.newsData.current);
             this.init();
         },
         init:function(typeid){
@@ -100,7 +94,6 @@ export default {
             }
             console.log("typeid======>"+typeid);
             axios.get('./newsList.json?current='+that.newsData.current+'&keyID='+typeid).then(function (response) {
-                console.log(response);
                 if(response.data.retCode=='0000'){
                     Vue.set(that.newsData, 'newsList', response.data.data);
                     that.newsData.allpage = response.data.allpage;
@@ -113,10 +106,7 @@ export default {
     },
     data () {
         return {
-            new_header:{
-                'background':'#fff',
-                'color':'#000',
-            },
+            type:'news',
             newsData:{
                 current:1,//当前的页数
                 showItem:'',//显示的 条数

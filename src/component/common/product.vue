@@ -33,10 +33,8 @@ export default {
                 typeid = '';
             }
             axios.get('./productList.json?keyID='+typeid).then(function (response) {
-                console.log(response);
                 if(response.data.retCode=='0000'){
                     Vue.set(that.productList, 'data', response.data.data);
-                    console.log(that.productList.data[0]['caseTitle']);
                 }
             }).catch(function (response) {
                 console.log(response);
